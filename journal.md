@@ -1,4 +1,4 @@
-<img width="814" height="1118" alt="image" src="https://github.com/user-attachments/assets/097eb7d5-1501-4db6-88a8-8198bc78df4c" /># Entry 1 4/4/2026 - 6 Hours Spent
+# Entry 1 4/4/2026 - 6 Hours Spent
 Today is the first day of design for my cross gantry project. I think I will be doing this for hack club infill - thus, the printer needs to be "silly"/unique. That means it will be a wooden halo! I spent an hour looking at different wood types and sources and what wood has been used by others for printers. I looked at blank unfinished board, lasercut plywood, different hardwoods or softwoods, and more.
 Ultimately, I decided I was going to machine the halo on my school's ShopBot CNC router, using a 1/2" thick bamboo cutting board for my source material. I would also be using 1/4" lasercut plywood for my rail backers and other structural elements. 
 I also made plans to vacuum resin stabilize the wood. This is important as it allows for the bearing seats to maintain shape under belt tension and constant use. 
