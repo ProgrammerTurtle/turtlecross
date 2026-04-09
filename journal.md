@@ -1,4 +1,4 @@
-# Entry 1 4/4/2026 - 6 Hours Spent
+<img width="1327" height="1093" alt="image" src="https://github.com/user-attachments/assets/075d4756-2f43-4771-9b68-4ca0b65f4225" /># Entry 1 4/4/2026 - 7 Hours Spent
 Today is the first day of design for my cross gantry project. I think I will be doing this for hack club infill - thus, the printer needs to be "silly"/unique. That means it will be a wooden halo! I spent an hour looking at different wood types and sources and what wood has been used by others for printers. I looked at blank unfinished board, lasercut plywood, different hardwoods or softwoods, and more.
 Ultimately, I decided I was going to machine the halo on my school's ShopBot CNC router, using a 1/2" thick bamboo cutting board for my source material. I would also be using 1/4" lasercut plywood for my rail backers and other structural elements. 
 I also made plans to vacuum resin stabilize the wood. This is important as it allows for the bearing seats to maintain shape under belt tension and constant use. 
@@ -34,7 +34,7 @@ So, there are two dead shaft idlers and one pulley, all for 6mm belt.
 The pathing looks a bit like this, with the bottom left idler being the idler for the opposite side's motor, and the pulley and bearing stack (bearing stack is dead shaft idlers for the smooth side of the belt) are the driving side of the belt routing. The bearing stack is needed to route the belt far enough back to not hit the linear rail. In most cross gantries they just run the belt over the rail - however, this requires either long shaft motors or not mounting the double shear bearings to the halo. The first one goes against my design goals and the second one kinda defeats the point of a halo as you lose the alignment of your motors. 
 This was all I got done today ! Next steps are to figure out mounting for the pulleys/idlers and of course the rest of the printer.
 
-# Entry 2 4/5/2026 -7 Hours Spent
+# Entry 2 4/5/2026 - 7 Hours Spent
 Day two. Very first thing I did was work on packaging/mounting for the corner motor/idler assemblies. 
 
 <img width="1076" height="1135" alt="image" src="https://github.com/user-attachments/assets/49999a23-1119-4295-a289-f324e7d71fc4" />
@@ -133,3 +133,97 @@ Oh, you may have noticed that at one point throughout those photos, the halo got
 
 Here is a quick and dirty render I did to verify the fusion 360 wood textures/colors and get a "vibe check" of sillyness/cool factor. 
 That is all for today ! Next should be finishing up tensioners and beginning toolhead design. 
+
+# Entry 3 4/6/2026 - 9 Hours Spent
+
+Today was... entertaining. So, I determined I just cannot make the infill deadline work. That's ok.
+Because forge is happening. This means my budget can increase by a lot. This extremely silly printer has now been advanced to moderately silly - I am abandoning wood. 
+Am I abandoning the super compact size? No. Am I abandoning the 1" thick halo? No. It will just be metal now. Specifically, stainless steel. That means the halo weighs 6kg. Teehee. However, we gotta get through the first things first. 
+
+I realized something exciting ! I can fit 9mm belts without long shaft motors. How? I am not actually sure. But it fits. 
+
+<img width="904" height="991" alt="image" src="https://github.com/user-attachments/assets/489000e4-cab3-4cdf-bcb1-69d56a24958d" />
+
+<img width="1076" height="902" alt="image" src="https://github.com/user-attachments/assets/ae7a1707-13a7-4fe4-86e0-fb45ddd5e8f5" />
+
+Kinda hard to get good photos of it but there you go. It doesn't really change the corner module itself.
+
+<img width="1422" height="1084" alt="image" src="https://github.com/user-attachments/assets/004f6c43-1ba0-4402-aa7e-b96711532a3e" />
+
+It does change the halo though. You can see that the hubs of the pulleys are recessed into the halo - this is the only way it fits. But it works so I don't mind. 
+
+Notice how the halo is metal! I am so excited. 
+
+<img width="1502" height="1193" alt="image" src="https://github.com/user-attachments/assets/c1cc1d41-1687-4286-9a31-5ec053d3a835" />
+
+Most of todays entry was spent converting to metal. I had to completely redesign the halo. 
+
+<img width="2154" height="608" alt="image" src="https://github.com/user-attachments/assets/01c65655-ad11-40db-99a7-41b15d49f2bf" />
+
+That does mean we get these cool alignment pins though. For the wood halo this would have been pointless since there really is no way to align it on wood. With metal I can hold proper tolerances, so I can use two 3mm pins to locate my rails. These will be used for assemby and then removed.
+Also, with a metal halo, I can tap the halo directly for rail bolting ! No need for pass through nuts and super long screws. 
+
+<img width="1536" height="1039" alt="image" src="https://github.com/user-attachments/assets/4143dc5b-13b3-4500-8816-73572108a9d7" />
+
+From there I was able to work on tensioners. I determined that I made a bit of a stupid mistake the first time around. The tensioners would have been able to slide back and forth on the carriage since there was no clamping. So, I made one side stationary while the other has one screw to actually pull tension and then two more to clamp the tensioner block in place. 
+
+I actually changed it pretty quick though. 
+
+<img width="774" height="638" alt="image" src="https://github.com/user-attachments/assets/4a0a8ab6-b986-419c-9aa0-774286e77b1f" />
+
+I really just switched to one clamping screw and tried to minimize the height of the side blocks so that the overall gantry was shorter and thus more stable. 
+
+<img width="1394" height="852" alt="image" src="https://github.com/user-attachments/assets/a907ac78-8a9c-4412-9d43-50319f50adfc" />
+
+<img width="1768" height="876" alt="image" src="https://github.com/user-attachments/assets/5e4e0fc3-0556-4c98-8d4b-2caa4e1d2b61" />
+
+Here is a closeup on the shorter side. I used an insert nut instead of a heat insert here because I don't trust the heat insert to not slip, and the nut doesn't require nearly as much work on my end for alignment, as I don't have to actively keep it straight myself. 
+
+<img width="1400" height="1005" alt="image" src="https://github.com/user-attachments/assets/95570bcc-7046-4fb2-88f4-eae3c99f9d29" />
+
+On that note, here is a cool sense of scale ! It is so tiny.
+
+At this point I started looking into how much build volume I would actually have and realized it would be slightly less than 120mm due to the offset of the cross carriages vs the sides. 
+
+<img width="1217" height="996" alt="image" src="https://github.com/user-attachments/assets/ee708b69-a87d-4adb-a189-e698117856ae" />
+
+So, the real size is closer to 115x115. Which is fine! 
+I decided to maximize this by trying to move the rails as far towards the outside of the printer as possible. I mainly did this by moving the belt attachment point outwards so the rail could move. 
+
+<img width="1190" height="868" alt="image" src="https://github.com/user-attachments/assets/ea78ab80-64b9-411b-9ae6-fbbe3ac011b4" />
+
+<img width="1235" height="940" alt="image" src="https://github.com/user-attachments/assets/4f4b9ba8-5275-4eef-873c-530d9480ff18" />
+
+You can see the before vs after here. It's a small move, about 3mm, but keep in mind this is doubled due to the belts on each side. So, it makes a bigger difference than you would think when hyper optimizing. 
+
+<img width="1587" height="438" alt="image" src="https://github.com/user-attachments/assets/2643df36-303a-4d90-a6a3-ea9bdc1a8d31" />
+
+This also made the belt attachment points way less offset, helping mitigate any potential issues (though I explained earlier how those would cancel out either way, in theory).
+
+<img width="1327" height="1093" alt="image" src="https://github.com/user-attachments/assets/8dc36630-bb09-40f8-b65d-e334e3573b1c" />
+
+So this is what we are working with now. 
+
+<img width="1239" height="953" alt="image" src="https://github.com/user-attachments/assets/b2ae6de3-2374-437d-abc0-a4bb2907e8b9" />
+
+You can also see here how I made the cross bars and toolhead a bit thinner. I figure I can get away with 3mm instead of 6mm since I swapped to metal. 
+
+<img width="1194" height="965" alt="image" src="https://github.com/user-attachments/assets/61ab237a-4c60-4404-af9f-80134a5401b3" />
+
+Last big thing, I dehubbed the idler pullies like how Monolith does it, allowing for me to remove the weird thin walls on the edge of the halo. 
+
+<img width="1015" height="698" alt="image" src="https://github.com/user-attachments/assets/39c55f07-d8c1-4595-9d15-3bbd2ff33900" />
+
+These. Now it looks like: <img width="1080" height="750" alt="image" src="https://github.com/user-attachments/assets/db501188-553e-4cf7-be9c-1764338aa4e5" />
+
+There was a lot of stuff I didn't necessarily cover as it gets super repetitive but you can see some of the progression through the photos. A lot of small changes that cascade into a lot of work because fusion back propagation of feature changes is abbhorent, so I have to manually fix it every time. 
+
+<img width="1665" height="1051" alt="image" src="https://github.com/user-attachments/assets/e2f27ced-fb0c-4d23-8106-860cc1612250" />
+
+So many errors. Literal hours of make small change -> fix issues -> make small change -> fix issues.
+
+It looks great now though! I have been putting a lot of thought into where the rest of this printer will end up. I ideally want to use duet electronics/rrf, a bowden toolhead with cpap, structural panels, and more funky stuff. I really want to keep it all contained within the printer, including electronics, so it will be quite the challenge. 
+I have even been looking into designing a custom beefy cantilever z out of bent sheet metal, utilizing a ballscrew ! I have so many fun plans. 
+However, my next step is the toolhead before anything else, for real this time. 
+
+Custom hotend anyone?
