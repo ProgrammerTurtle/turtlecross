@@ -302,4 +302,4 @@ Oooo so shiny. I really hope I won't have to change this hotend much at all. I c
 
 Next is when things get harder. Ducts, making things fit. Bleh.
 
-**Time spent: 3.5 hours**
+**Total time spent: 3.5 hours**
