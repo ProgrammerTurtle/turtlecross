@@ -1,4 +1,12 @@
-# Entry 1 4/4/2026 - 7 Hours Spent
+---
+title: "Osmium"
+author: "Parker Rupe"
+description: "Osmium, a name chosen for the sheer absurd density of this project, is a custom halo-frame based ultra compact cross gantry 3D printer. The entire printer should fit inside the build volume of most normal printers (like a bambu p1), with its own build volume of as close to 120mm^3 as possible. As the main design aspect, it features a 1” thick machined steel halo that the entire rest of the printer is referenced off of. Further design restrictions/goals include using nema 17 motors for all axes, including the extruder, a custom hotend, Bowden + CPAP for an ultra light toolhead, 9mm belts (without long shaft motors), and a custom bent sheet metal cantilever z assembly."
+created_at: "2026-04-04"
+---
+
+# April 4: Began Design
+
 Today is the first day of design for my cross gantry project. I think I will be doing this for hack club infill - thus, the printer needs to be "silly"/unique. That means it will be a wooden halo! I spent an hour looking at different wood types and sources and what wood has been used by others for printers. I looked at blank unfinished board, lasercut plywood, different hardwoods or softwoods, and more.
 Ultimately, I decided I was going to machine the halo on my school's ShopBot CNC router, using a 1/2" thick bamboo cutting board for my source material. I would also be using 1/4" lasercut plywood for my rail backers and other structural elements. 
 I also made plans to vacuum resin stabilize the wood. This is important as it allows for the bearing seats to maintain shape under belt tension and constant use. 
@@ -34,7 +42,10 @@ So, there are two dead shaft idlers and one pulley, all for 6mm belt.
 The pathing looks a bit like this, with the bottom left idler being the idler for the opposite side's motor, and the pulley and bearing stack (bearing stack is dead shaft idlers for the smooth side of the belt) are the driving side of the belt routing. The bearing stack is needed to route the belt far enough back to not hit the linear rail. In most cross gantries they just run the belt over the rail - however, this requires either long shaft motors or not mounting the double shear bearings to the halo. The first one goes against my design goals and the second one kinda defeats the point of a halo as you lose the alignment of your motors. 
 This was all I got done today ! Next steps are to figure out mounting for the pulleys/idlers and of course the rest of the printer.
 
-# Entry 2 4/5/2026 - 7 Hours Spent
+**Total time spent: 6.5 hours**
+
+# April 5: Gantry Dev, mainly Motors/Mounting
+
 Day two. Very first thing I did was work on packaging/mounting for the corner motor/idler assemblies. 
 
 <img width="1076" height="1135" alt="image" src="https://github.com/user-attachments/assets/49999a23-1119-4295-a289-f324e7d71fc4" />
@@ -134,7 +145,9 @@ Oh, you may have noticed that at one point throughout those photos, the halo got
 Here is a quick and dirty render I did to verify the fusion 360 wood textures/colors and get a "vibe check" of sillyness/cool factor. 
 That is all for today ! Next should be finishing up tensioners and beginning toolhead design. 
 
-# Entry 3 4/6/2026 - 9 Hours Spent
+**Total time spent: 7.2 hours**
+
+# April 6: Pivot design goals for Forge
 
 Today was... entertaining. So, I determined I just cannot make the infill deadline work. That's ok.
 Because forge is happening. This means my budget can increase by a lot. This extremely silly printer has now been advanced to moderately silly - I am abandoning wood. 
@@ -227,3 +240,66 @@ I have even been looking into designing a custom beefy cantilever z out of bent 
 However, my next step is the toolhead before anything else, for real this time. 
 
 Custom hotend anyone?
+
+**Total time spent: 5.8 hours**
+
+# April 9: Hot End Design
+
+I started off my venture into the fine details of the toolhead with a custom hotend. Given my two previous hotend designs for Rework, I feel fairly comfortable doing this.
+This hot end will have the same melt zone length as a supervolcano, but with different mounting, size, and less weight.
+
+<img width="1107" height="726" alt="image" src="https://github.com/user-attachments/assets/a6956ed6-b572-43b3-b84f-d012baa0cb1c" />
+
+I started off with a simple sketch consisting of literally just circles. One bore, the top one, is the melt zone bore, while the lower one is the heater bore. The two side circles are to define outer shape. 
+The melt zone and heater will only be like 3mm apart. Good stuff. 
+
+<img width="506" height="866" alt="image" src="https://github.com/user-attachments/assets/2aba3ecb-4748-420a-9ab1-082f5223dd08" />
+
+When extruded, we get this tall figure 8 looking thing. 
+
+<img width="854" height="808" alt="image" src="https://github.com/user-attachments/assets/3b515234-58d0-4e09-b3f9-e58f09dd4092" />
+
+And then it gets meltzone threads.
+This is just M6 threading. The nozzle, supervolcano meltzone adapter, and heatbreak are all just m6 threaded, making assembly easy. 
+Why this figure 8 shape? I realize I did not explain much. Long story short, it helps minimize mass without looking stupid or having too thin of walls. Since I defined the circle locations off of tangent circles, it physically cannot make my predefined wall thicknesses any thinner (as any cutouts will remain tangent to those outer faces). 
+
+However, I do have to add some material for set screws and thermitors. 
+
+<img width="641" height="942" alt="image" src="https://github.com/user-attachments/assets/2fe0337a-5c3f-4111-bf8c-dee6bbad63fa" />
+
+I came up with this end cap type thing. It is wider on the heater side because I have a silly idea for hot end bracing that you will see in a second. 
+
+<img width="744" height="1055" alt="image" src="https://github.com/user-attachments/assets/2b8f0cb0-ea50-42b8-bb35-556f6986c9c0" />
+
+It gets a chamfer and mirrored, making a pretty cooling looking heater block that doesn't weigh much! Ideally I will get this made out of copper or steel, both of which are very dense, so mass minimizing is important. This toolhead will be bowden and cpap so it is genuinely possible for the hotend to be the heaviest component. 
+
+<img width="736" height="1036" alt="image" src="https://github.com/user-attachments/assets/f680ab01-b6be-4ac9-8b8b-23252b7876af" />
+
+4 M3 holes on the rear bore. Two for set screws, two for thermistors. Dealers choice on which hole is which. 
+
+<img width="565" height="1192" alt="image" src="https://github.com/user-attachments/assets/f232e4d2-638c-44ce-b4c3-af395891cbc1" />
+
+Yay, I added the nozzle and heatbreak. The melt zone adapter is there too but not visible. It is a standard length v6 nozzle and a "v6 smooth heatbreak" from aliexpress that I used on my other hotends. 
+
+<img width="474" height="812" alt="image" src="https://github.com/user-attachments/assets/0e5fc43e-656f-426a-a644-4f5f8b3abb77" />
+
+I made a quick and dirty heater cartridge model and that gets added too. This will likely be one of the high wattage 48v cartridges from Luke's Lab. 
+
+<img width="612" height="924" alt="image" src="https://github.com/user-attachments/assets/9534241d-d97b-44c2-8c12-6edf2fd30cf7" />
+
+In place, it looks pretty neat. 
+And finally, to reveal the silly hotend bracing I mentioned earlier. 
+
+<img width="937" height="841" alt="image" src="https://github.com/user-attachments/assets/7eb9bf97-1f77-45b9-954d-d553be8c4d71" />
+
+Two M2 screws on the bottom of the hotend itself. I know, it's unique. Kinda. It is actually similar to how chube mounts it's bracing, except mine will be the part cooling ducts for space saving reasons.
+
+<img width="471" height="1166" alt="image" src="https://github.com/user-attachments/assets/6891fb60-6d58-4096-86c9-b9135c029c09" />
+
+<img width="612" height="997" alt="image" src="https://github.com/user-attachments/assets/326c98c4-875c-4268-840a-5addf361c23b" />
+
+Oooo so shiny. I really hope I won't have to change this hotend much at all. I can just like, stay strict to it while designing the rest of my toolhead. 
+
+Next is when things get harder. Ducts, making things fit. Bleh.
+
+**Time spent: 3.5 hours**
